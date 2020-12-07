@@ -1,0 +1,18 @@
+h1 {
+    color: var(--pink-color);
+    font-size: 80px;
+    font-family: var(--primary-font);
+    line-height: 0.7em;
+}
+
+h5 {
+    color: var(--text-color);
+    font-family: var(--secondary-font);
+}
+
+@media (min-width: 700px) {
+    .text {
+        padding-top: 2em;
+        font-size: 2em;
+      }
+}

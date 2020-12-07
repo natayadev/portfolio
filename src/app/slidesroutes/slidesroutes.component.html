@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
+    <div class="section section-padding active">
+        <app-welcome></app-welcome>
+      </div>
+      <div class="section">
+        <app-aboutme></app-aboutme>
+      </div>
+      <div class="section section-padding">
+        <app-skills></app-skills>
+      </div>
+      <div class="section section-padding">
+        <app-work></app-work>
+      </div>
+      <div class="section section-padding">
+        <app-contact></app-contact>
+      </div>
+  </div>

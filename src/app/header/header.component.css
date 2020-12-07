@@ -1,0 +1,18 @@
+* {
+    color: var(--text-color);
+    font-family: var(--primary-font);
+}
+
+a {
+    margin-right: 1em;
+    background-size: 100% 0em;
+    background-repeat: no-repeat;
+    background-position: left 75%;
+    background: linear-gradient(to bottom, transparent 62%, var(--pink-color) 0) center left/0% 75% no-repeat;
+    transition: background-size .3s ease;
+}
+
+a:active, a:hover {
+    background-size: 100% 1.2em;
+    background-position: left 100%;
+}

@@ -1,0 +1,52 @@
+  .links {
+      padding: 0.4em 1em;
+  }
+  
+  .link {
+    display: flex;
+    flex-direction: row;
+    margin: 0.2em;
+    padding: 0.6em 1em;
+    height: 50px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .link:nth-child(even) {
+    background: var(--purple-color);
+  }
+  
+  .link:nth-child(odd) {
+    background: var(--yellow-color);;
+  }
+  
+  .avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #eeeeee, #c8c8c8);
+    box-shadow:  10px 10px 24px #a7a7a7, -10px -10px 24px #ffffff;
+    margin-bottom: 1em;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+  
+  a {
+    color: var(--biscuit-color);
+  }
+  
+  a:hover {
+    color: var(--text-color);
+    text-decoration:none;
+    text-transform: uppercase;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--biscuit-color);
+    color: var(--text-color);
+    font-size: 12px;
+  }
