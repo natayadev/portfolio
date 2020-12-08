@@ -9,6 +9,10 @@
     --primary-font: 'Alata', sans-serif;
     --secondary-font: 'Homemade Apple', cursive;
     --text-font: 'Helvetica', sans-serif;
+    --size-font-min: 12px;
+    --size-font-max: 14px;
+    --size-font-super: 20px;
+    --size-title: 26px;
   }
   
 * {
@@ -58,29 +62,31 @@ header {
   background-color: var(--biscuit-color);
 }
 
-h2, h4, h6 {
-  font-family: var(--primary-font);
-  font-size: 34px;
-}
-
 h6 {
-  font-size: 16px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  font-family: var(--primary-font);
+  font-size: var(--size-font-max);
 }
 
-h5 {
-  font-family: var(--secondary-font);
+h4 {
+  font-size: var(--size-title);
+  font-weight: bold;
+}
+
+h5, h4 {
+  font-family: var(--primary-font);
 }
 
 a, h2 {
-  color: black;
+  font-family: var(--primary-font);
+  color: var(--text-color);
   text-decoration: none;
 }
 
 h6 {
-letter-spacing: 0.2em;
-text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -119,13 +125,13 @@ h2:hover {
       left: 0;
       -ms-transform: translate(0%, 10%);
       transform: translate(0%, 10%);
-  }
+    }
 }
 
 @media (max-width: 768px) {
   .section-padding {
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
   .avcontainer {
@@ -133,16 +139,22 @@ h2:hover {
       flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
-      padding: 3em;
   }
 
   .avatar {
-      height: 15em;
-      width: 15em;
+      height: 10em;
+      width: 10em;
       background-size: cover;
       background-position: center;
       border-radius: 100%;
-      margin-bottom: 2em;
+  }
+
+  p {
+    font-size: var(--size-font-min);
+  }
+
+  a, h2 {
+    font-size: 10px;
   }
 
   .credits {
@@ -159,4 +171,41 @@ h2:hover {
 }
 
 .fp-controlArrow.fp-prev {
-  border-color: transparent var(--purple-color) transparent transparent;}
+  border-color: transparent var(--purple-color) transparent transparent;
+}
+
+  .parpadeo {
+    position: absolute;
+    width: max-content;
+    bottom: 10%;
+    left: 50%;
+    -ms-transform: translate(-50%, 10%);
+    transform: translate(-50%, 10%);
+    font-family: var(--primary-font);
+    animation-name: parpadeo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: parpadeo;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+  }
+  
+  @-moz-keyframes parpadeo{  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @-webkit-keyframes parpadeo {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+  }
+  
+  @keyframes parpadeo {  
+    0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }

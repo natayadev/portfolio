@@ -1,6 +1,6 @@
 h1 {
     color: var(--pink-color);
-    font-size: 80px;
+    font-size: 60px;
     font-family: var(--primary-font);
     line-height: 0.7em;
 }
@@ -11,8 +11,7 @@ h5 {
 }
 
 @media (min-width: 700px) {
-    .text {
-        padding-top: 2em;
-        font-size: 2em;
-      }
+    h1 {
+        font-size: 90px;
+    }
 }
