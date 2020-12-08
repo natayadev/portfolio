@@ -16,3 +16,9 @@ a:active, a:hover {
     background-size: 100% 1.2em;
     background-position: left 100%;
 }
+
+@media (min-width: 768px) {
+    * {
+        font-size: 18px;
+    }
+}

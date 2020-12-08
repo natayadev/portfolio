@@ -26,10 +26,6 @@ header {
   z-index: 1;
 }
 
-.marco {
-  border: 1px solid var(--text-color);
-}
-
 .pink-highlighter {
   background-size: 80% 2em;
   background: var(--pink-color);
@@ -108,8 +104,11 @@ h2:hover {
 
 @media (min-width: 768px) {
   .section-padding {
-    padding-left: 15em;
-    padding-right: 15em;
+    padding: 0em 2em;
+  }
+
+  .text {
+    padding: 0em 3em;
   }
 
   .avatar {
@@ -130,8 +129,7 @@ h2:hover {
 
 @media (max-width: 768px) {
   .section-padding {
-    padding-left: 1em;
-    padding-right: 1em;
+    padding: 0em 1.2em;
   }
 
   .avcontainer {
