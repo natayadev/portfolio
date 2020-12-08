@@ -34,7 +34,9 @@
   }
   
   a {
+    margin: 0.2em 0em;
     color: var(--biscuit-color);
+    font-size: var(--size-font-max);
   }
   
   a:hover {
