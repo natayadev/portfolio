@@ -16,10 +16,8 @@ export class SlidesroutesComponent {
       menu: '#menu',
       // fullpage callbacks
       afterResize: () => {
-        console.log("After resize");
       },
       afterLoad: (origin, destination, direction) => {
-        console.log(origin.index);
       }
     };
   }
