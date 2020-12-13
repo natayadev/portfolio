@@ -20,6 +20,12 @@
   font-family: var(--text-font);
 }
 
+p::selection, span::selection, h4::selection, h6::selection {
+  background-size: 80% 2em;
+  background: var(--pink-color);
+  color: var(--biscuit-color);
+}
+
 header {
   position: fixed;
   background-color: transparent;
