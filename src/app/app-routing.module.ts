@@ -7,6 +7,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { SkillsComponent } from './skills/skills.component';
 import { WorkComponent } from './work/work.component';
+import { TalksComponent } from './talks/talks.component';
 import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'aboutme', component: AboutmeComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'projects', component: WorkComponent },
+  { path: 'talks', component: TalksComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', component: PagenotfoundComponent },
 ];

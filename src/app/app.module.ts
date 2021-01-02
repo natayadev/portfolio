@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { SlidesroutesComponent } from './slidesroutes/slidesroutes.component';
+import { TalksComponent } from './talks/talks.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SlidesroutesComponent } from './slidesroutes/slidesroutes.component';
     ContactComponent,
     FooterComponent,
     PagenotfoundComponent,
-    SlidesroutesComponent
+    SlidesroutesComponent,
+    TalksComponent
   ],
   imports: [
     BrowserModule,

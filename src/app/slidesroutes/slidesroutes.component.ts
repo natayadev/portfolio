@@ -11,8 +11,8 @@ export class SlidesroutesComponent {
     // for more details on config options please visit fullPage.js docs
     this.config = {
       // fullpage options
-      anchors: ['home', 'aboutme', 'skills', 'projects', 'contact' ],
-      sectionsColor: ['#fffcfa', '#fffcfa', '#fffcfa', '#fffcfa', '#fffcfa' ],
+      anchors: ['home', 'aboutme', 'skills', 'projects', 'talks', 'contact' ],
+      sectionsColor: ['#fffcfa', '#fffcfa', '#fffcfa', '#fffcfa', '#fffcfa', '#fffcfa' ],
       menu: '#menu',
       // fullpage callbacks
       afterResize: () => {
