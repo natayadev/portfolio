@@ -21,7 +21,7 @@
   font-size: var(--size-font-max);
 }
 
-p::selection, span::selection, h4::selection, h6::selection {
+*::selection {
   background-size: 80% 2em;
   background: var(--pink-color);
   color: var(--biscuit-color);
