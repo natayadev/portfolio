@@ -1,6 +1,6 @@
 * {
     color: var(--text-color);
-    font-family: var(--primary-font);
+    font-family: var(--text-font);
 }
 
 a {
@@ -15,6 +15,7 @@ a {
 a:active, a:hover {
     background-size: 100% 1.2em;
     background-position: left 100%;
+    font-weight: bold;
 }
 
 @media (min-width: 768px) {
