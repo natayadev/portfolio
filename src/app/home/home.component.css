@@ -1,0 +1,5 @@
+h5 {
+  color: var(--text-color);
+  font-family: var(--secondary-font);
+  font-size: 2em;
+}

@@ -1,4 +1,10 @@
 button {
-    background-color: var(--pink-color);
-    border-radius: 8px;
+  background-color: var(--pink-color);
+  border-radius: 8px;
+}
+
+.avatar {
+  background-image: url("../../assets/avatar2.png");
+  height: 14em;
+  width: 14em;
 }

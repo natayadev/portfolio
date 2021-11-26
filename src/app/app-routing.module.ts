@@ -1,28 +1,41 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { MylinksComponent } from './mylinks/mylinks.component';
-import { SlidesroutesComponent } from './slidesroutes/slidesroutes.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { AboutmeComponent } from './aboutme/aboutme.component';
-import { SkillsComponent } from './skills/skills.component';
-import { WorkComponent } from './work/work.component';
-import { TalksComponent } from './talks/talks.component';
-import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
-  { path: '', component: SlidesroutesComponent },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./modules/home/home.module').then((m) => m.HomeModule),
+  },
+  {
+    path: 'skills',
+    loadChildren: () =>
+      import('./modules/skills/skills.module').then((m) => m.SkillsModule),
+  },
+  {
+    path: 'portfolio',
+    loadChildren: () =>
+      import('./modules/work/work.module').then((m) => m.WorkModule),
+  },
+  {
+    path: 'talks',
+    loadChildren: () =>
+      import('./modules/talks/talks.module').then((m) => m.TalksModule),
+  },
+  {
+    path: 'contact',
+    loadChildren: () =>
+      import('./modules/contact/contact.module').then((m) => m.ContactModule),
+  },
   { path: 'links', component: MylinksComponent },
-  { path: 'home', component: WelcomeComponent },
-  { path: 'aboutme', component: AboutmeComponent },
-  { path: 'skills', component: SkillsComponent },
-  { path: 'projects', component: WorkComponent },
-  { path: 'talks', component: TalksComponent },
-  { path: 'contact', component: ContactComponent },
   { path: '**', component: PagenotfoundComponent },
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

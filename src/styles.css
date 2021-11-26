@@ -1,20 +1,18 @@
-@import '~fullpage.js/dist/fullpage.min.css';
-
 :root {
-    --text-color: #444444;
-    --biscuit-color: #fffcfa;
-    --pink-color: #ff8086;
-    --purple-color: #aab0d6;
-    --yellow-color: #ffde94;
-    --primary-font: 'Alata', sans-serif;
-    --secondary-font: 'Homemade Apple', cursive;
-    --text-font: 'Merriweather', serif;
-    --size-font-min: 12px;
-    --size-font-max: 14px;
-    --size-font-super: 20px;
-    --size-title: 26px;
-  }
-  
+  --text-color: #444444;
+  --biscuit-color: #fffcfa;
+  --pink-color: #ff8086;
+  --purple-color: #aab0d6;
+  --yellow-color: #ffde94;
+  --primary-font: "Alata", sans-serif;
+  --secondary-font: "Homemade Apple", cursive;
+  --text-font: "Merriweather", serif;
+  --size-font-min: 12px;
+  --size-font-max: 14px;
+  --size-font-super: 20px;
+  --size-title: 26px;
+}
+
 * {
   color: var(--text-color);
   font-family: var(--text-font);
@@ -27,10 +25,15 @@
   color: var(--biscuit-color);
 }
 
-header {
+body {
+  background: var(--biscuit-color);
+}
+
+footer {
   position: fixed;
-  background-color: transparent;
-  z-index: 1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .pink-highlighter {
@@ -60,8 +63,11 @@ header {
   border: 1px solid var(--yellow-color);
 }
 
-.pink-chip, .yellow-chip, .purple-chip {
-  height: 20px;
+.pink-chip,
+.yellow-chip,
+.purple-chip {
+  height: 16px;
+  width: 50px;
   background-color: var(--biscuit-color);
 }
 
@@ -77,11 +83,13 @@ h4 {
   font-weight: bold;
 }
 
-h5, h4 {
+h5,
+h4 {
   font-family: var(--primary-font);
 }
 
-a, h2 {
+a,
+h2 {
   font-family: var(--text-font);
   font-weight: bold;
   color: var(--text-color);
@@ -97,122 +105,129 @@ h2 {
   background-size: 100% 0.6em;
   background-repeat: no-repeat;
   background-position: center 75%;
-  transition: background-size 0.30s ease-in;
-  background-image: linear-gradient(120deg, #ff8086 0%,lightpink 100%);
+  transition: background-size 0.3s ease-in;
+  background-image: linear-gradient(120deg, #ff8086 0%, lightpink 100%);
   font-size: 14px;
 }
 
 h2:hover {
-    background-size: 100% 1.2em;
+  background-size: 100% 1.2em;
 }
 
 .avatar {
   background-image: url("./assets/avatar1.png");
+  height: 16em;
+  width: 16em;
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+}
+
+.avatar:hover {
+  background-image: url("./assets/avatar3.jpg");
 }
 
 @media (min-width: 768px) {
-  .section-padding {
-    padding: 0em 2em;
-  }
-
   .text {
     padding: 0em 3em;
   }
 
-  .avatar {
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
+  .credits {
+    position: absolute;
+    width: max-content;
+    bottom: 10%;
+    left: 0;
+    -ms-transform: translate(0%, 10%);
+    transform: translate(0%, 10%);
   }
 
-  .credits {
-      position: absolute;
-      width: max-content;
-      bottom: 10%;
-      left: 0;
-      -ms-transform: translate(0%, 10%);
-      transform: translate(0%, 10%);
-    }
+  .md-center-y {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+  }
 }
 
 @media (max-width: 768px) {
-  .section-padding {
-    padding: 0em 1.2em;
-  }
-
-  .avcontainer {
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
-  }
-
-  .avatar {
-      height: 10em;
-      width: 10em;
-      background-size: cover;
-      background-position: center;
-      border-radius: 100%;
-  }
-
   p {
     font-size: var(--size-font-min);
   }
 
-  a, h2 {
+  a,
+  h2 {
     font-size: 10px;
   }
 
   .credits {
-      position: absolute;
-      bottom: 6%;
-      left: 50%;
-      -ms-transform: translate(-50%, 6%);
-      transform: translate(-50%, 6%);
-  }
-}
-
-.fp-controlArrow.fp-next {
-  border-color: transparent transparent transparent var(--purple-color);
-}
-
-.fp-controlArrow.fp-prev {
-  border-color: transparent var(--purple-color) transparent transparent;
-}
-
-  .parpadeo {
     position: absolute;
-    width: max-content;
-    bottom: 10%;
+    bottom: 6%;
     left: 50%;
-    -ms-transform: translate(-50%, 10%);
-    transform: translate(-50%, 10%);
-    font-family: var(--text-font);
-    font-weight: bold;
-    animation-name: parpadeo;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    -webkit-animation-name: parpadeo;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
+    -ms-transform: translate(-50%, 6%);
+    transform: translate(-50%, 6%);
   }
-  
-  @-moz-keyframes parpadeo{  
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
+
+  .center-y {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
   }
-  
-  @-webkit-keyframes parpadeo {  
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-     100% { opacity: 1.0; }
+}
+
+.parpadeo {
+  position: absolute;
+  width: max-content;
+  bottom: 10%;
+  left: 50%;
+  -ms-transform: translate(-50%, 10%);
+  transform: translate(-50%, 10%);
+  font-family: var(--text-font);
+  font-weight: bold;
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: parpadeo;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo {
+  0% {
+    opacity: 1;
   }
-  
-  @keyframes parpadeo {  
-    0% { opacity: 1.0; }
-     50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
+  50% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
