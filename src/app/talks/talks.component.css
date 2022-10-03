@@ -1,3 +1,9 @@
 a:hover {
   font-size: medium;
 }
+
+.justify-items-center {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+}

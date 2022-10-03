@@ -1,0 +1,11 @@
+.credly {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .credly {
+        align-items: flex-start;
+    }
+}

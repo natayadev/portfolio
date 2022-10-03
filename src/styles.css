@@ -123,9 +123,9 @@ h2:hover {
   border-radius: 100%;
 }
 
-.avatar:hover {
+/* .avatar:hover {
   background-image: url("./assets/avatar3.jpg");
-}
+} */
 
 @media (min-width: 768px) {
   .text {
