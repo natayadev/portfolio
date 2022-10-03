@@ -8,3 +8,16 @@ button {
   height: 14em;
   width: 14em;
 }
+
+.twitter-follow-button {
+  position: relative;
+  height: 20px;
+  box-sizing: border-box;
+  padding: 1px 12px 1px 12px;
+  background-color: #1d9bf0;
+  color: #fff;
+  border-radius: 9999px;
+  font-weight: 500;
+  cursor: pointer;
+  font: normal normal normal 12px/18px 'Helvetica Neue',Arial,sans-serif;
+}
